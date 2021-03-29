@@ -35,7 +35,7 @@ const Mapa = () => {
   const [show, setShow] = useState(false);
   const [visible, setVisible] = useState(true);
   const [heat, setHeat] = useState(false);
-  const[gmap,setGmap] = useState(false);
+  const[gmap,setGmap] = useState(true);
   const [dark, setDark] = useState(false);
   const posicion2 = [-27.4038, -55.8830]
 
