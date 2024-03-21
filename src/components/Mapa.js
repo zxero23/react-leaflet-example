@@ -1,26 +1,25 @@
-import { faAdjust, faLayerGroup, faMapMarker, faSync,faSatellite} from '@fortawesome/free-solid-svg-icons';
+import { faAdjust, faLayerGroup, faMapMarker, faSatellite, faSync } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
-import { Map, TileLayer, ZoomControl } from "react-leaflet";
+import { Map, TileLayer } from "react-leaflet";
 import Control from 'react-leaflet-control';
+import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 import { Button, Label } from 'reactstrap';
+import Cookies from 'universal-cookie';
 import Table from '../components/Table/table';
 import '../css/Mapa.css';
 import HeatmapLayer from './HeatmapLayer';
+import MenuAppBar from './MenuAppBar';
 import ModalNuevaDenuncia from './ModalNuevaDenuncia';
 import VenueMarkers from './VenueMarkers';
-import MenuAppBar from './MenuAppBar';
-import Cookies from 'universal-cookie';
-import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
-import { Satellite } from '@material-ui/icons';
 
 const cookies = new Cookies();
 
 
-const baseUrl = "https://denuncias-api-posadas.herokuapp.com/denuncias?size=650";
+const baseUrl = "http://localhost:8001/denuncias";
 
 
 var idPersonas = [];

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { Button,Table,Pagination, PaginationItem, PaginationLink } from 'reactstrap';
-import axios from 'axios'
-import '../../css/Table.css';
-import Loading from './Loading.js'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Button, Table } from 'reactstrap';
 import Cookies from 'universal-cookie';
+import '../../css/Table.css';
+import Loading from './Loading.js';
 const cookies = new Cookies();
 
 
 const Tables = ({tipoDenuncia}) => {
   
-    let URL = 'https://denuncias-api-posadas.herokuapp.com/denuncias'
+    let URL = 'http://localhost:8001/denuncias'
     
     const[load,setLoad]=useState(false);
     const [denuncias, setDenuncias] = useState([])

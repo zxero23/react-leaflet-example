@@ -74,7 +74,7 @@ class ModalNuevaDenuncia extends React.Component {
 
 
         axios
-            .post('https://denuncias-api-posadas.herokuapp.com/denuncias', myObjStr, {
+            .post('http://localhost:8001/denuncias', myObjStr, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': cookies.get("token")
